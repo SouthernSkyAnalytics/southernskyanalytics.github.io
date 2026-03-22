@@ -31,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -73,13 +72,12 @@
 
   .nav-links a:hover { color: var(--gold); }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8rem 3rem 5rem;
+    padding: 4rem 3rem 5rem;
     position: relative;
     overflow: hidden;
   }
@@ -146,7 +144,7 @@
   .hero-tagline {
     font-size: clamp(1rem, 1.8vw, 1.2rem);
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.9;
     color: var(--ink-mid);
     max-width: 640px;
     margin-bottom: 0.75rem;
@@ -159,10 +157,14 @@
     color: var(--ink);
   }
 
+  .hero-tagline .line {
+    display: block;
+  }
+
   .hero-sub {
     font-size: 0.95rem;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.9;
     color: var(--ink-light);
     max-width: 580px;
     margin-top: 1.5rem;
@@ -241,7 +243,6 @@
     100% { left: 100%; }
   }
 
-  /* ORIGIN STORY */
   .origin {
     padding: 7rem 3rem;
     background: var(--ink);
@@ -323,7 +324,6 @@
     line-height: 1.4;
   }
 
-  /* PRODUCTS */
   .products {
     padding: 7rem 3rem;
     background: var(--white);
@@ -431,7 +431,6 @@
     background: var(--gold);
   }
 
-  /* CONTACT */
   .contact {
     padding: 6rem 3rem;
     background: var(--sky);
@@ -515,7 +514,6 @@
     color: var(--ink);
   }
 
-  /* FOOTER */
   footer {
     padding: 2rem 3rem;
     background: var(--ink);
@@ -550,6 +548,7 @@
   .fade-up:nth-child(3) { animation-delay: 0.4s; }
   .fade-up:nth-child(4) { animation-delay: 0.55s; }
   .fade-up:nth-child(5) { animation-delay: 0.7s; }
+  .fade-up:nth-child(6) { animation-delay: 0.85s; }
 
   @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
@@ -558,7 +557,7 @@
   @media (max-width: 900px) {
     nav { padding: 1.25rem 1.5rem; }
     .nav-links { display: none; }
-    .hero { padding: 7rem 1.5rem 4rem; }
+    .hero { padding: 4rem 1.5rem 4rem; }
     .origin { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
     .products { padding: 5rem 1.5rem; }
     .products-grid { grid-template-columns: 1fr; }
@@ -584,12 +583,14 @@
   <div class="hero-grid"></div>
   <div class="hero-content">
     <div class="hero-eyebrow fade-up">Mass Appraisal Intelligence</div>
-    <h1 class="fade-up">Tools that help appraisers<br><em>understand, "Why?"</em></h1>
+    <h1 class="fade-up">Tools that help appraisers<br><em>answer, "Why?"</em></h1>
     <div class="hero-tagline fade-up">
-      <strong>A competent appraiser can develop a value from scant information.</strong><br>
-      A good appraiser always wants to know why.
+      <strong class="line">Appraisers want to know "Why?"</strong>
+      <span class="line">Your CAMA system was designed to answer "What?"</span>
     </div>
-    <p class="hero-sub fade-up">Southern Sky Analytics builds spatial analysis and workflow tools for assessment professionals who demand more than plausible explanations — built by a working appraiser who felt the same frustration.</p>
+    <div class="hero-sub fade-up">
+      We understand your frustration — we are working appraisers. We've been there. Stop asking your CAMA system to do something it was never designed to do. Southern Sky Analytics builds tools for appraisers who demand more than plausible explanations — appraisers who want to know "Why?"
+    </div>
     <div class="fade-up">
       <a href="#products" class="hero-cta">View Products</a>
       <a href="#contact" class="hero-cta hero-cta-ghost">Get in Touch</a>
@@ -607,8 +608,8 @@
     <h2>Built by someone who fought the same tools you're fighting</h2>
     <div class="origin-body">
       <p>The county CAMA system was fine. It held the data. It could show you a record. But it couldn't <strong>answer a question.</strong> It couldn't tell you what was actually happening in a neighborhood, why land values were behaving the way they were, or whether your assumptions were holding up against the data.</p>
-      <p>The work started small — custom filters to get related data on one screen. Then data exports to Excel for closer inspection. Then R and RStudio to test assumptions and see what the numbers were actually saying. And when the 2027 revaluation cycle came around, the first real tool: a vacant land explorer built to develop accurate, defensible neighborhood land values from the ground up.</p>
-      <p>That's where this started. Not in a product pitch meeting. Not in a conference room. <strong>In the middle of an ongoing revaluation, with real data, under real deadlines</strong> — built by a working appraiser for working appraisers.</p>
+      <p>The work started small — custom filters to get related data on one screen. Then data exports to Excel for closer inspection. Then R and RStudio to test assumptions and see what the numbers were actually saying. And when our revaluation cycle came around, the first real tool: a vacant land explorer built to help sift through thousands of possible comps to identify the best available. A tool to help appraisers develop accurate, defensible neighborhood land values.</p>
+      <p>That's where this all started. Not in a computer lab, not in a conference room, but in the middle of a complex ongoing revaluation. <strong>Mass appraisal tools built for real data, real deadlines, and the real world.</strong></p>
     </div>
   </div>
   <div class="origin-right">
@@ -619,7 +620,7 @@
         <div class="stat-label">Built against live revaluation data, not demo datasets.</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">Clarity</div>
+        <div class="stat-number">Clear</div>
         <div class="stat-label">Surfaces the right details at the right time.</div>
       </div>
       <div class="stat-item">
@@ -627,7 +628,7 @@
         <div class="stat-label">Analysis structured to hold up under appeal and review.</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">Why</div>
+        <div class="stat-number">Answers</div>
         <div class="stat-label">Built to answer questions, not just display data.</div>
       </div>
     </div>
@@ -638,21 +639,21 @@
   <div class="section-header">
     <div class="section-label">Products</div>
     <h2>MAVEN — Mass Appraisal &amp; Valuation Environment</h2>
-    <p>An integrated platform for the full neighborhood development workflow. Not a collection of separate tools — a single environment where the data, the analysis, and the documentation live together.</p>
+    <p>Focused tools in an integrated environment where data, analysis, and documentation live together.</p>
   </div>
   <div class="products-grid">
 
     <div class="product-card">
       <div class="product-tag">Neighborhood Reports</div>
       <h3>From permit data to defensible documentation</h3>
-      <p>Automated permit classification, investment tier scoring, and standardized neighborhood condition reports — structured for USPAP-compliant mass appraisal documentation. One click from raw permit data to a finished PDF.</p>
+      <p>Automated permit classification, investment-based condition analysis, neighborhood stratification cohorts, and pre-work cleaning lists — one click from raw data to a finished PDF.</p>
       <div class="product-coming">In Development</div>
     </div>
 
     <div class="product-card">
       <div class="product-tag">Vacant Land Explorer</div>
       <h3>Spatial comp selection that shows its work</h3>
-      <p>Map-driven comparable sales identification for vacant land appraisal. Filter by distance, size, zoning, and sale date. See subject and comps on the same map. Know why a comp belongs in your analysis — not just that it does.</p>
+      <p>Map-driven comparable sales identification for vacant land appraisal. Filter by distance, size, zoning, and sale date. See subject and comps on the same map. Know your comps are strong — not just acceptable.</p>
       <div class="product-coming">In Development</div>
     </div>
 
@@ -669,17 +670,17 @@
 <section class="contact" id="contact">
   <div>
     <div class="section-label">Contact</div>
-    <h2>Talk to someone who understands the work</h2>
-    <p>Southern Sky Analytics is in active development against a live revaluation cycle. If you're an assessment professional interested in early access, a pilot program, or just want to talk through what better tools could look like for your jurisdiction — reach out.</p>
+    <h2>We live in your world</h2>
+    <p>Southern Sky Analytics is a value-centric company full of working appraisers. We live in your world of tight deadlines, strict guidelines, and data overload. If you're an assessment professional interested in early access, a pilot program, or just want to talk through what better tools could look like for your jurisdiction — reach out.</p>
   </div>
-  <form class="contact-form" onsubmit="handleSubmit(event)">
+  <form class="contact-form" action="https://formspree.io/f/mzdjlerp" method="POST">
     <div class="form-row">
-      <input type="text" placeholder="First name" required>
-      <input type="text" placeholder="Last name" required>
+      <input type="text" name="first_name" placeholder="First name" required>
+      <input type="text" name="last_name" placeholder="Last name" required>
     </div>
-    <input type="email" placeholder="Email address" required>
-    <input type="text" placeholder="County / Organization">
-    <select>
+    <input type="email" name="email" placeholder="Email address" required>
+    <input type="text" name="organization" placeholder="County / Organization">
+    <select name="interest">
       <option value="" disabled selected>I'm interested in...</option>
       <option>Early access / pilot program</option>
       <option>Neighborhood Reports module</option>
@@ -688,7 +689,7 @@
       <option>Custom implementation</option>
       <option>Just keeping in touch</option>
     </select>
-    <textarea placeholder="Anything else you'd like us to know (optional)"></textarea>
+    <textarea name="message" placeholder="Anything else you'd like us to know (optional)"></textarea>
     <button type="submit" class="submit-btn">Send Message</button>
   </form>
 </section>
@@ -699,16 +700,6 @@
 </footer>
 
 <script>
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.submit-btn');
-  btn.textContent = "Thank you — we'll be in touch.";
-  btn.disabled = true;
-  btn.style.background = '#b89a4a';
-  btn.style.borderColor = '#b89a4a';
-  btn.style.color = '#0f1a0f';
-}
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const target = document.querySelector(this.getAttribute('href'));
