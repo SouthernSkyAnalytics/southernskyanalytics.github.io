@@ -11,14 +11,14 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --ink: #0f1a0f;
-    --ink-mid: #3a4a3a;
-    --ink-light: #6b7c6b;
-    --sky: #e8f0e8;
-    --sky-dark: #c4d4c4;
-    --gold: #b89a4a;
+    --ink:        #0f1a0f;
+    --ink-mid:    #3a4a3a;
+    --ink-light:  #6b7c6b;
+    --sky:        #e8f0e8;
+    --sky-dark:   #c4d4c4;
+    --gold:       #b89a4a;
     --gold-light: #d4b86a;
-    --white: #f8faf8;
+    --white:      #f8faf8;
   }
 
   html { scroll-behavior: smooth; }
@@ -40,22 +40,20 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 3rem;
-    background: rgba(248, 250, 248, 0.92);
+    background: rgba(248,250,248,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--sky-dark);
   }
 
   .nav-logo {
     font-family: 'DM Serif Display', serif;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     letter-spacing: 0.04em;
     color: var(--ink);
     text-decoration: none;
   }
 
-  .nav-logo span {
-    color: var(--gold);
-  }
+  .nav-logo span { color: var(--gold); }
 
   .nav-links {
     display: flex;
@@ -64,7 +62,7 @@
   }
 
   .nav-links a {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -81,7 +79,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8rem 3rem 4rem;
+    padding: 8rem 3rem 5rem;
     position: relative;
     overflow: hidden;
   }
@@ -90,8 +88,8 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(184, 154, 74, 0.06) 0%, transparent 70%),
-      radial-gradient(ellipse 60% 80% at 20% 80%, rgba(196, 212, 196, 0.4) 0%, transparent 60%);
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(184,154,74,0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 80% at 20% 80%, rgba(196,212,196,0.4) 0%, transparent 60%);
     pointer-events: none;
   }
 
@@ -102,22 +100,22 @@
       linear-gradient(var(--sky-dark) 1px, transparent 1px),
       linear-gradient(90deg, var(--sky-dark) 1px, transparent 1px);
     background-size: 60px 60px;
-    opacity: 0.25;
+    opacity: 0.2;
     pointer-events: none;
   }
 
   .hero-content {
     position: relative;
-    max-width: 820px;
+    max-width: 860px;
   }
 
   .hero-eyebrow {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -133,11 +131,11 @@
 
   h1 {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-size: clamp(2.6rem, 5.5vw, 4.75rem);
     line-height: 1.08;
     letter-spacing: -0.01em;
     color: var(--ink);
-    margin-bottom: 1.75rem;
+    margin-bottom: 2rem;
   }
 
   h1 em {
@@ -145,13 +143,31 @@
     color: var(--ink-mid);
   }
 
-  .hero-sub {
-    font-size: 1.05rem;
+  .hero-tagline {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
     font-weight: 300;
     line-height: 1.7;
     color: var(--ink-mid);
-    max-width: 560px;
+    max-width: 640px;
+    margin-bottom: 0.75rem;
+    border-left: 2px solid var(--gold);
+    padding-left: 1.25rem;
+  }
+
+  .hero-tagline strong {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--ink-light);
+    max-width: 580px;
+    margin-top: 1.5rem;
     margin-bottom: 2.5rem;
+    padding-left: 1.25rem;
   }
 
   .hero-cta {
@@ -161,7 +177,7 @@
     padding: 0.85rem 2rem;
     background: var(--ink);
     color: var(--white);
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -188,7 +204,6 @@
     color: var(--ink);
   }
 
-  /* SCROLL INDICATOR */
   .scroll-indicator {
     position: absolute;
     bottom: 2.5rem;
@@ -196,7 +211,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -226,19 +241,19 @@
     100% { left: 100%; }
   }
 
-  /* ABOUT STRIP */
-  .about {
-    padding: 6rem 3rem;
+  /* ORIGIN STORY */
+  .origin {
+    padding: 7rem 3rem;
     background: var(--ink);
     color: var(--white);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
+    gap: 6rem;
+    align-items: start;
   }
 
-  .about-label {
-    font-size: 0.7rem;
+  .origin-label {
+    font-size: 0.68rem;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -246,35 +261,58 @@
     margin-bottom: 1.25rem;
   }
 
-  .about h2 {
+  .origin h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem);
     line-height: 1.2;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
     color: var(--white);
   }
 
-  .about p {
+  .origin-body p {
     font-size: 0.95rem;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.9;
     color: rgba(248,250,248,0.7);
+    margin-bottom: 1.25rem;
   }
 
-  .about-stats {
+  .origin-body p:last-child { margin-bottom: 0; }
+
+  .origin-body strong {
+    color: rgba(248,250,248,0.95);
+    font-weight: 400;
+  }
+
+  .origin-right {
+    padding-top: 0.5rem;
+  }
+
+  .pull-quote {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--gold-light);
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .origin-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
   }
 
   .stat-item {
-    border-top: 1px solid rgba(248,250,248,0.15);
+    border-top: 1px solid rgba(248,250,248,0.12);
     padding-top: 1.25rem;
   }
 
   .stat-number {
     font-family: 'DM Serif Display', serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--gold-light);
     line-height: 1;
     margin-bottom: 0.4rem;
@@ -282,9 +320,9 @@
 
   .stat-label {
     font-size: 0.78rem;
-    font-weight: 400;
-    color: rgba(248,250,248,0.55);
-    letter-spacing: 0.05em;
+    font-weight: 300;
+    color: rgba(248,250,248,0.45);
+    line-height: 1.4;
   }
 
   /* PRODUCTS */
@@ -295,11 +333,11 @@
 
   .section-header {
     margin-bottom: 4rem;
-    max-width: 600px;
+    max-width: 640px;
   }
 
   .section-label {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -320,9 +358,17 @@
 
   .section-header h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-size: clamp(1.8rem, 2.8vw, 2.4rem);
     line-height: 1.2;
     color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .section-header p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--ink-mid);
   }
 
   .products-grid {
@@ -339,20 +385,11 @@
     transition: background 0.2s;
   }
 
-  .product-card:hover {
-    background: var(--sky);
-  }
-
-  .product-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 1.5rem;
-    opacity: 0.7;
-  }
+  .product-card:hover { background: var(--sky); }
 
   .product-tag {
     display: inline-block;
-    font-size: 0.65rem;
+    font-size: 0.63rem;
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -372,7 +409,7 @@
   .product-card p {
     font-size: 0.88rem;
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--ink-mid);
   }
 
@@ -381,7 +418,7 @@
     align-items: center;
     gap: 0.4rem;
     margin-top: 1.25rem;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -408,7 +445,7 @@
 
   .contact h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-size: clamp(1.8rem, 2.8vw, 2.4rem);
     line-height: 1.2;
     color: var(--ink);
     margin-bottom: 1rem;
@@ -434,7 +471,8 @@
   }
 
   .contact-form input,
-  .contact-form textarea {
+  .contact-form textarea,
+  .contact-form select {
     width: 100%;
     padding: 0.8rem 1rem;
     font-family: 'DM Sans', sans-serif;
@@ -446,19 +484,17 @@
     outline: none;
     transition: border-color 0.2s;
     resize: none;
+    appearance: none;
   }
 
   .contact-form input:focus,
-  .contact-form textarea:focus {
-    border-color: var(--gold);
-  }
+  .contact-form textarea:focus,
+  .contact-form select:focus { border-color: var(--gold); }
 
-  .contact-form textarea { height: 120px; }
+  .contact-form textarea { height: 110px; }
 
   .contact-form input::placeholder,
-  .contact-form textarea::placeholder {
-    color: var(--ink-light);
-  }
+  .contact-form textarea::placeholder { color: var(--ink-light); }
 
   .submit-btn {
     align-self: flex-start;
@@ -466,7 +502,7 @@
     background: var(--ink);
     color: var(--white);
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -493,19 +529,19 @@
   .footer-logo {
     font-family: 'DM Serif Display', serif;
     font-size: 0.95rem;
-    color: rgba(248,250,248,0.6);
+    color: rgba(248,250,248,0.5);
     letter-spacing: 0.04em;
   }
 
   .footer-logo span { color: var(--gold-light); }
 
   footer p {
-    font-size: 0.75rem;
-    color: rgba(248,250,248,0.35);
+    font-size: 0.72rem;
+    color: rgba(248,250,248,0.3);
     letter-spacing: 0.05em;
   }
 
-  /* FADE IN ANIMATION */
+  /* ANIMATIONS */
   .fade-up {
     opacity: 0;
     transform: translateY(24px);
@@ -516,6 +552,7 @@
   .fade-up:nth-child(2) { animation-delay: 0.25s; }
   .fade-up:nth-child(3) { animation-delay: 0.4s; }
   .fade-up:nth-child(4) { animation-delay: 0.55s; }
+  .fade-up:nth-child(5) { animation-delay: 0.7s; }
 
   @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
@@ -525,7 +562,7 @@
     nav { padding: 1.25rem 1.5rem; }
     .nav-links { display: none; }
     .hero { padding: 7rem 1.5rem 4rem; }
-    .about { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
+    .origin { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
     .products { padding: 5rem 1.5rem; }
     .products-grid { grid-template-columns: 1fr; }
     .contact { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
@@ -539,7 +576,7 @@
 <nav>
   <a href="#" class="nav-logo">Southern Sky <span>Analytics</span></a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
+    <li><a href="#origin">Our Story</a></li>
     <li><a href="#products">Products</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -549,9 +586,13 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow fade-up">Spatial Analytics &amp; Valuation Intelligence</div>
-    <h1 class="fade-up">Data tools built for<br><em>assessment professionals</em></h1>
-    <p class="hero-sub fade-up">Southern Sky Analytics develops purpose-built spatial analysis and mass appraisal workflow tools for government assessors and valuation professionals.</p>
+    <div class="hero-eyebrow fade-up">Mass Appraisal Intelligence</div>
+    <h1 class="fade-up">Tools that help appraisers<br><em>understand why</em></h1>
+    <div class="hero-tagline fade-up">
+      <strong>A competent appraiser can develop a value from scant information.</strong><br>
+      A good appraiser always wants to know why.
+    </div>
+    <p class="hero-sub fade-up">Southern Sky Analytics builds spatial analysis and workflow tools for assessment professionals who demand more than plausible explanations — built by an appraiser who felt the same frustration.</p>
     <div class="fade-up">
       <a href="#products" class="hero-cta">View Products</a>
       <a href="#contact" class="hero-cta hero-cta-ghost">Get in Touch</a>
@@ -563,28 +604,35 @@
   </div>
 </section>
 
-<section class="about" id="about">
+<section class="origin" id="origin">
   <div>
-    <div class="about-label">Who We Are</div>
-    <h2>Built from the inside of the assessment office</h2>
-    <p>Southern Sky Analytics was founded by a senior residential appraiser with deep experience in mass appraisal methodology, IAAO compliance, and large-scale revaluation cycles. Every tool we build solves a problem we have lived firsthand.</p>
+    <div class="origin-label">The Story</div>
+    <h2>Built by someone who fought the same tools you're fighting</h2>
+    <div class="origin-body">
+      <p>The county CAMA system was fine. It held the data. It could show you a record. But it couldn't <strong>answer a question.</strong> It couldn't tell you what was actually happening in a neighborhood, why land values were behaving the way they were, or whether your assumptions were holding up against the data.</p>
+      <p>The work started small — custom filters to get related data on one screen. Then data exports to Excel for closer inspection. Then R and RStudio to test assumptions and see what the numbers were actually saying. And when the 2027 revaluation cycle came around, the first real tool: a vacant land explorer built to develop accurate, defensible neighborhood land values from the ground up.</p>
+      <p>That's where Southern Sky Analytics started. Not in a product roadmap. <strong>In the middle of a revaluation cycle, with real data, under real deadlines.</strong></p>
+    </div>
   </div>
-  <div class="about-stats">
-    <div class="stat-item">
-      <div class="stat-number">IAAO</div>
-      <div class="stat-label">Standards compliant workflow design</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">GIS</div>
-      <div class="stat-label">Spatial-first analysis architecture</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Mass</div>
-      <div class="stat-label">Appraisal methodology at the core</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Real</div>
-      <div class="stat-label">Workflows from active revaluation cycles</div>
+  <div class="origin-right">
+    <div class="pull-quote">"The system could show me the data. It just couldn't answer the question."</div>
+    <div class="origin-stats">
+      <div class="stat-item">
+        <div class="stat-number">IAAO</div>
+        <div class="stat-label">Standards-compliant methodology at every layer</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Real</div>
+        <div class="stat-label">Built against live revaluation data, not demo datasets</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">USPAP</div>
+        <div class="stat-label">Documentation designed for mass appraisal compliance</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Why</div>
+        <div class="stat-label">Every tool answers questions, not just displays data</div>
+      </div>
     </div>
   </div>
 </section>
@@ -592,50 +640,29 @@
 <section class="products" id="products">
   <div class="section-header">
     <div class="section-label">Products</div>
-    <h2>Tools launching soon</h2>
+    <h2>MAVEN — Mass Appraisal &amp; Valuation Environment</h2>
+    <p>An integrated platform for the full neighborhood development workflow. Not a collection of separate tools — a single environment where the data, the analysis, and the documentation live together.</p>
   </div>
   <div class="products-grid">
 
     <div class="product-card">
-      <svg class="product-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="4" width="14" height="14" stroke="#b89a4a" stroke-width="1.5"/>
-        <rect x="22" y="4" width="14" height="14" stroke="#3a4a3a" stroke-width="1.5"/>
-        <rect x="4" y="22" width="14" height="14" stroke="#3a4a3a" stroke-width="1.5"/>
-        <rect x="22" y="22" width="14" height="14" stroke="#3a4a3a" stroke-width="1.5"/>
-        <circle cx="11" cy="11" r="2" fill="#b89a4a"/>
-      </svg>
-      <div class="product-tag">MAVEN</div>
-      <h3>Mass Appraisal &amp; Valuation Environment</h3>
-      <p>An integrated browser-based platform for neighborhood delineation, revaluation progress tracking, heat map analysis, and neighborhood data development reporting.</p>
+      <div class="product-tag">Neighborhood Reports</div>
+      <h3>From permit data to defensible documentation</h3>
+      <p>Automated permit classification, investment tier scoring, and standardized neighborhood condition reports — structured for USPAP-compliant mass appraisal documentation. One click from raw permit data to a finished PDF.</p>
       <div class="product-coming">In Development</div>
     </div>
 
     <div class="product-card">
-      <svg class="product-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 32 L14 20 L22 26 L30 12 L36 18" stroke="#b89a4a" stroke-width="1.5" stroke-linejoin="round"/>
-        <circle cx="14" cy="20" r="2" fill="#3a4a3a"/>
-        <circle cx="22" cy="26" r="2" fill="#3a4a3a"/>
-        <circle cx="30" cy="12" r="2" fill="#3a4a3a"/>
-        <line x1="6" y1="34" x2="36" y2="34" stroke="#c4d4c4" stroke-width="1"/>
-        <line x1="6" y1="6" x2="6" y2="34" stroke="#c4d4c4" stroke-width="1"/>
-      </svg>
-      <div class="product-tag">VacLandExp</div>
-      <h3>Vacant Land Explorer</h3>
-      <p>Spatial comparable sales selection and analysis for vacant land appraisal. Map-driven comp identification with attribute filtering and adjustment support.</p>
+      <div class="product-tag">Vacant Land Explorer</div>
+      <h3>Spatial comp selection that shows its work</h3>
+      <p>Map-driven comparable sales identification for vacant land appraisal. Filter by distance, size, zoning, and sale date. See subject and comps on the same map. Know why a comp belongs in your analysis — not just that it does.</p>
       <div class="product-coming">In Development</div>
     </div>
 
     <div class="product-card">
-      <svg class="product-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="8" y="5" width="24" height="30" rx="1" stroke="#3a4a3a" stroke-width="1.5"/>
-        <line x1="13" y1="13" x2="27" y2="13" stroke="#b89a4a" stroke-width="1.5"/>
-        <line x1="13" y1="19" x2="27" y2="19" stroke="#c4d4c4" stroke-width="1"/>
-        <line x1="13" y1="24" x2="22" y2="24" stroke="#c4d4c4" stroke-width="1"/>
-        <line x1="13" y1="29" x2="19" y2="29" stroke="#c4d4c4" stroke-width="1"/>
-      </svg>
-      <div class="product-tag">NBHD Reports</div>
-      <h3>Neighborhood Data Development</h3>
-      <p>Automated permit analysis, investment tier scoring, and standardized neighborhood condition reporting — structured for USPAP-compliant mass appraisal documentation.</p>
+      <div class="product-tag">Reval Progress</div>
+      <h3>Cycle-wide visibility for assessment leadership</h3>
+      <p>Real-time revaluation progress tracking across every neighborhood in the jurisdiction. Completion rates, outstanding work, and milestone monitoring — the view your assessor needs to run a revaluation with confidence.</p>
       <div class="product-coming">In Development</div>
     </div>
 
@@ -645,8 +672,8 @@
 <section class="contact" id="contact">
   <div>
     <div class="section-label">Contact</div>
-    <h2>Get notified at launch</h2>
-    <p>Southern Sky Analytics is currently in active development. Leave your contact information to be notified when products become available, or to inquire about early access and custom implementations.</p>
+    <h2>Talk to someone who understands the work</h2>
+    <p>Southern Sky Analytics is in active development against a live revaluation cycle. If you're an assessment professional interested in early access, a pilot program, or just want to talk through what better tools could look like for your jurisdiction — reach out.</p>
   </div>
   <form class="contact-form" onsubmit="handleSubmit(event)">
     <div class="form-row">
@@ -654,9 +681,18 @@
       <input type="text" placeholder="Last name" required>
     </div>
     <input type="email" placeholder="Email address" required>
-    <input type="text" placeholder="Organization / County">
-    <textarea placeholder="What are you looking for? (optional)"></textarea>
-    <button type="submit" class="submit-btn">Submit Inquiry</button>
+    <input type="text" placeholder="County / Organization">
+    <select>
+      <option value="" disabled selected>I'm interested in...</option>
+      <option>Early access / pilot program</option>
+      <option>Neighborhood Reports module</option>
+      <option>Vacant Land Explorer</option>
+      <option>Reval Progress tracking</option>
+      <option>Custom implementation</option>
+      <option>Just keeping in touch</option>
+    </select>
+    <textarea placeholder="Anything else you'd like us to know (optional)"></textarea>
+    <button type="submit" class="submit-btn">Send Message</button>
   </form>
 </section>
 
@@ -669,7 +705,7 @@
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.submit-btn');
-  btn.textContent = 'Thank you — we\'ll be in touch.';
+  btn.textContent = "Thank you — we'll be in touch.";
   btn.disabled = true;
   btn.style.background = '#b89a4a';
   btn.style.borderColor = '#b89a4a';
@@ -686,5 +722,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 </script>
+
 </body>
 </html>
